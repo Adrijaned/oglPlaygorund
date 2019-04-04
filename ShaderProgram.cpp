@@ -51,3 +51,9 @@ ShaderProgram &ShaderProgram::activate() {
   glUseProgram(handle);
   return *this;
 }
+
+ShaderProgram &ShaderProgram::setUniform(const std::string &uniformName, glm::vec4) {
+  GLint uniformLocation = glGetUniformLocation(handle, uniformName.c_str());
+  if (uniformLocation == -1)
+  return *this;
+}

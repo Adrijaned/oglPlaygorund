@@ -9,6 +9,7 @@
 #include <string>
 #include <GL/glew.h>
 #include <vector>
+#include <glm/glm.hpp>
 
 class ShaderProgram {
   unsigned int handle;
@@ -16,17 +17,26 @@ class ShaderProgram {
   bool isFinished = false;
 public:
   ShaderProgram();
-  /// Attaches a shader to the current program
-  /// \param shaderName Name of the shader located in `shaders` dir, without suffix
-  /// \param shaderType Type of the shader (GL_VERTEX_SAHDER vs GL_FRAGMENT_SHADER)
-  /// \return self for method chaining.
+  /**
+   * Attaches a shader to the current program
+   * @param shaderName Name of the shader located in `shaders` dir, without suffix
+   * @param shaderType Type of the shader (GL_VERTEX_SAHDER vs GL_FRAGMENT_SHADER)
+   * @return self for method chaining.
+   * @throws FileNotFoundException
+   */
   ShaderProgram& attachShader(const std::string &shaderName, GLenum shaderType);
-  /// Finishes adding new shaders, makes itself ready for use.
-  /// \return self for method chaining.
+  /**
+   * Finishes adding new shaders, makes itself ready for use.
+   * @return self for method chaining.
+   */
   ShaderProgram& finish();
-  /// Activates this shader program.
-  /// \return self for method chaining.
+  /**
+   * Activates this shader program.
+   * @return self for method chaining.
+   */
   ShaderProgram& activate();
+
+  ShaderProgram& setUniform(const std::string& uniformName, glm::vec4 value);
 };
 
 
