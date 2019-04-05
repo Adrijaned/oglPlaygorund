@@ -35,8 +35,17 @@ public:
    * @return self for method chaining.
    */
   ShaderProgram& activate();
-
-  ShaderProgram& setUniform(const std::string& uniformName, glm::vec4 value);
+  ///@{
+  /**
+   * Sets a value of uniform in shader.
+   * @param uniformName Name of the uniform value
+   * @param value The value to set
+   * @return self for method chaining.
+   * @throws UnknownIdentifierException when no uniform with specified name was found.
+   */
+  ShaderProgram& setUniform(const std::string& uniformName, const glm::vec4& value);
+  ShaderProgram& setUniform(const std::string& uniformName, const glm::vec3& value);
+  ///@}
 };
 
 

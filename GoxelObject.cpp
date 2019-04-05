@@ -3,7 +3,7 @@
 //
 
 #include "GoxelObject.hpp"
-#include "FileNotFoundException.hpp"
+#include "exceptions/FileNotFoundException.hpp"
 #include <cstdio>
 
 GoxelObject::GoxelObject(std::string &filename) {
@@ -14,6 +14,7 @@ GoxelObject::GoxelObject(std::string &filename) {
   if (objfile == nullptr) {
     throw FileNotFoundException{filename};
   }
+  //todo this
 }
 
 GoxelObject::~GoxelObject() {

@@ -5,7 +5,7 @@
 #include "fileUtils.hpp"
 #include <string>
 #include <cstdio>
-#include "FileNotFoundException.hpp"
+#include "exceptions/FileNotFoundException.hpp"
 
 char* readFile(const std::string &filename){
   FILE* fp = fopen(filename.c_str(), "r");

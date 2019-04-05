@@ -4,7 +4,8 @@
 
 #include "ShaderProgram.hpp"
 #include "fileUtils.hpp"
-#include "InvalidStateException.hpp"
+#include "exceptions/InvalidStateException.hpp"
+#include "exceptions/UnknownIdentifierException.hpp"
 #include <cstdio>
 
 ShaderProgram& ShaderProgram::attachShader(const std::string &shaderName, GLenum shaderType) {
@@ -52,8 +53,14 @@ ShaderProgram &ShaderProgram::activate() {
   return *this;
 }
 
-ShaderProgram &ShaderProgram::setUniform(const std::string &uniformName, glm::vec4) {
+ShaderProgram &ShaderProgram::setUniform(const std::string &uniformName, const glm::vec4& value) {
   GLint uniformLocation = glGetUniformLocation(handle, uniformName.c_str());
-  if (uniformLocation == -1)
+  if (uniformLocation == -1) throw UnknownIdentifierException{"Uniform name not found."};
+  //todo
+  return *this;
+}
+
+ShaderProgram &ShaderProgram::setUniform(const std::string &uniformName, const glm::vec3& value) {
+  //todo
   return *this;
 }
