@@ -69,6 +69,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Abstraction layer over OGL shader programs.  
+ <a href="classShaderProgram.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="ShaderProgram_8hpp_source.html">ShaderProgram.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -92,7 +95,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aac65dc573759cd7521ddc6ce592a6f89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a value of uniform in shader.  <a href="#aac65dc573759cd7521ddc6ce592a6f89">More...</a><br /></td></tr>
 <tr class="separator:aac65dc573759cd7521ddc6ce592a6f89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Abstraction layer over OGL shader programs. </p>
+<p>Provides methods for handy loading of shaders from files and using them, without having to deal with OGL pointers. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="add585b75cb78f4afa865ea7b27c9651e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#add585b75cb78f4afa865ea7b27c9651e">&#9670;&nbsp;</a></span>ShaderProgram()</h2>
 
@@ -168,7 +174,7 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>self for method chaining. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname"><a class="el" href="classFileNotFoundException.html">FileNotFoundException</a></td><td></td></tr>
+    <tr><td class="paramname"><a class="el" href="classFileNotFoundException.html" title="Tried to open unknown file.">FileNotFoundException</a></td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -222,6 +228,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Sets a value of uniform in shader. </p>
+<p>The shader must be active for this to have effect, failure to ensure so will however NOT result in an Exception.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">uniformName</td><td>Name of the uniform value </td></tr>
@@ -266,6 +273,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Sets a value of uniform in shader. </p>
+<p>The shader must be active for this to have effect, failure to ensure so will however NOT result in an Exception.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">uniformName</td><td>Name of the uniform value </td></tr>

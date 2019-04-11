@@ -8,6 +8,11 @@
 #include <stdexcept>
 #include <string>
 
+/**
+ * State machine in wrong state.
+ *
+ * Happens when e.g. attempt is made to use GLSL shader that has not been compiled yet.
+ */
 class InvalidStateException : public std::logic_error {
 public:
   explicit InvalidStateException(const std::string& what_arg) : logic_error(what_arg) {};

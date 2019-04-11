@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['platform_5fid',['PLATFORM_ID',['../3_813_82_2CompilerIdC_2CMakeCCompilerId_8c.html#adbc5372f40838899018fadbc89bd588b',1,'PLATFORM_ID():&#160;CMakeCCompilerId.c'],['../3_813_82_2CompilerIdCXX_2CMakeCXXCompilerId_8cpp.html#adbc5372f40838899018fadbc89bd588b',1,'PLATFORM_ID():&#160;CMakeCXXCompilerId.cpp'],['../3_813_84_2CompilerIdC_2CMakeCCompilerId_8c.html#adbc5372f40838899018fadbc89bd588b',1,'PLATFORM_ID():&#160;CMakeCCompilerId.c'],['../3_813_84_2CompilerIdCXX_2CMakeCXXCompilerId_8cpp.html#adbc5372f40838899018fadbc89bd588b',1,'PLATFORM_ID():&#160;CMakeCXXCompilerId.cpp']]]
+  ['setuniform',['setUniform',['../classShaderProgram.html#a37a9f61e346f4036c53b37712c6df7c5',1,'ShaderProgram::setUniform(const std::string &amp;uniformName, const glm::vec4 &amp;value)'],['../classShaderProgram.html#aac65dc573759cd7521ddc6ce592a6f89',1,'ShaderProgram::setUniform(const std::string &amp;uniformName, const glm::vec3 &amp;value)']]],
+  ['shaderprogram',['ShaderProgram',['../classShaderProgram.html',1,'ShaderProgram'],['../classShaderProgram.html#add585b75cb78f4afa865ea7b27c9651e',1,'ShaderProgram::ShaderProgram()']]],
+  ['shaderprogram_2ecpp',['ShaderProgram.cpp',['../ShaderProgram_8cpp.html',1,'']]],
+  ['shaderprogram_2ehpp',['ShaderProgram.hpp',['../ShaderProgram_8hpp.html',1,'']]]
 ];

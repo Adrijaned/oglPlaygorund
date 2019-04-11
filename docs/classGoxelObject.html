@@ -69,37 +69,71 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Loads and processes goxel-exported obj model.  
+ <a href="classGoxelObject.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="GoxelObject_8hpp_source.html">GoxelObject.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af11ff194fd0125cf1c82a83986c03636"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGoxelObject.html#af11ff194fd0125cf1c82a83986c03636">GoxelObject</a> (std::string &amp;filename)</td></tr>
-<tr class="memdesc:af11ff194fd0125cf1c82a83986c03636"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new object from a goxel obj file.  <a href="#af11ff194fd0125cf1c82a83986c03636">More...</a><br /></td></tr>
-<tr class="separator:af11ff194fd0125cf1c82a83986c03636"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cc12cd89f86e3fd73ae89436e7a639c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGoxelObject.html#a1cc12cd89f86e3fd73ae89436e7a639c">GoxelObject</a> (const std::string &amp;filename, float scale)</td></tr>
+<tr class="memdesc:a1cc12cd89f86e3fd73ae89436e7a639c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new vertex object from a goxel obj file.  <a href="#a1cc12cd89f86e3fd73ae89436e7a639c">More...</a><br /></td></tr>
+<tr class="separator:a1cc12cd89f86e3fd73ae89436e7a639c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7671fd0441685a1a0aa2e6931da31a7e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGoxelObject.html#a7671fd0441685a1a0aa2e6931da31a7e">~GoxelObject</a> ()</td></tr>
+<tr class="memdesc:a7671fd0441685a1a0aa2e6931da31a7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets rid of the allocated buffers.  <a href="#a7671fd0441685a1a0aa2e6931da31a7e">More...</a><br /></td></tr>
 <tr class="separator:a7671fd0441685a1a0aa2e6931da31a7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c13a922a1e5f34ddd03936b192a15cc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGoxelObject.html#a4c13a922a1e5f34ddd03936b192a15cc">drawBuffers</a> () const</td></tr>
+<tr class="memdesc:a4c13a922a1e5f34ddd03936b192a15cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws inner vertex buffers.  <a href="#a4c13a922a1e5f34ddd03936b192a15cc">More...</a><br /></td></tr>
+<tr class="separator:a4c13a922a1e5f34ddd03936b192a15cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="af11ff194fd0125cf1c82a83986c03636"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af11ff194fd0125cf1c82a83986c03636">&#9670;&nbsp;</a></span>GoxelObject()</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Loads and processes goxel-exported obj model. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a1cc12cd89f86e3fd73ae89436e7a639c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cc12cd89f86e3fd73ae89436e7a639c">&#9670;&nbsp;</a></span>GoxelObject()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">GoxelObject::GoxelObject </td>
           <td>(</td>
-          <td class="paramtype">std::string &amp;&#160;</td>
-          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>scale</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Creates a new object from a goxel obj file. </p>
+<p>Creates a new vertex object from a goxel obj file. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">filename</td><td>filename of the obj file </td></tr>
+    <tr><td class="paramname">filename</td><td>Name of the file with the exported goxel obj </td></tr>
+    <tr><td class="paramname">scale</td><td>All dimensions in model will be multiplied by this. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classFileNotFoundException.html" title="Tried to open unknown file.">FileNotFoundException</a></td><td>when no file was accesible under given filename. </td></tr>
   </table>
   </dd>
 </dl>
@@ -120,6 +154,29 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Gets rid of the allocated buffers. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a4c13a922a1e5f34ddd03936b192a15cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c13a922a1e5f34ddd03936b192a15cc">&#9670;&nbsp;</a></span>drawBuffers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GoxelObject::drawBuffers </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Draws inner vertex buffers. </p>
+<p>Expects shader program to be active that has in vertex vec3 on location 0 and in color vec3 on location 1. </p>
 
 </div>
 </div>

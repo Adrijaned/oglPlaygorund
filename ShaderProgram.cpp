@@ -54,13 +54,17 @@ ShaderProgram &ShaderProgram::activate() {
 }
 
 ShaderProgram &ShaderProgram::setUniform(const std::string &uniformName, const glm::vec4& value) {
-  GLint uniformLocation = glGetUniformLocation(handle, uniformName.c_str());
-  if (uniformLocation == -1) throw UnknownIdentifierException{"Uniform name not found."};
-  //todo
+  glUniform4f(getUniformLocation(uniformName), value.x, value.y, value.z, value.w);
   return *this;
 }
 
 ShaderProgram &ShaderProgram::setUniform(const std::string &uniformName, const glm::vec3& value) {
-  //todo
+  glUniform3f(getUniformLocation(uniformName), value.x, value.y, value.z);
   return *this;
+}
+
+GLuint ShaderProgram::getUniformLocation(const std::string& uniformName) const {
+  GLint uniformLocation = glGetUniformLocation(handle, uniformName.c_str());
+  if (uniformLocation == -1) throw UnknownIdentifierException{"Uniform name not found."};
+  return uniformLocation;
 }

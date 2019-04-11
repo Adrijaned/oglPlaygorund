@@ -75,6 +75,7 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:addf68aec208c58458cc0060be639f03f"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fileUtils_8cpp.html#addf68aec208c58458cc0060be639f03f">readFile</a> (const std::string &amp;filename)</td></tr>
+<tr class="memdesc:addf68aec208c58458cc0060be639f03f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns file in heap allocated cstring.  <a href="#addf68aec208c58458cc0060be639f03f">More...</a><br /></td></tr>
 <tr class="separator:addf68aec208c58458cc0060be639f03f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -93,6 +94,22 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Returns file in heap allocated cstring. </p>
+<p>File is returned in heap-allocated space, to prevent memory leaks the memory must be manually freed [using free()] when no longer needed.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>Name and path of the file to get </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to cstring with the contents of the file. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classFileNotFoundException.html" title="Tried to open unknown file.">FileNotFoundException</a></td><td>when no file was accessible under given filename. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

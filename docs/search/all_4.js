@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['goxelobject',['GoxelObject',['../classGoxelObject.html',1,'GoxelObject'],['../classGoxelObject.html#af11ff194fd0125cf1c82a83986c03636',1,'GoxelObject::GoxelObject()']]],
-  ['goxelobject_2ecpp',['GoxelObject.cpp',['../GoxelObject_8cpp.html',1,'']]],
-  ['goxelobject_2ehpp',['GoxelObject.hpp',['../GoxelObject_8hpp.html',1,'']]]
+  ['invalidstateexception',['InvalidStateException',['../classInvalidStateException.html',1,'InvalidStateException'],['../classInvalidStateException.html#af8088c783ee9a9f731b107a3eba3b9a7',1,'InvalidStateException::InvalidStateException()']]],
+  ['invalidstateexception_2ehpp',['InvalidStateException.hpp',['../InvalidStateException_8hpp.html',1,'']]]
 ];

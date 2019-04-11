@@ -11,10 +11,36 @@
 #include <vector>
 #include <glm/glm.hpp>
 
+/**
+ * Abstraction layer over OGL shader programs.
+ *
+ * Provides methods for handy loading of shaders from files and using them,
+ * without having to deal with OGL pointers.
+ */
 class ShaderProgram {
+  /**
+   * OGL pointer the the OGL ShaderProgram.
+   */
   unsigned int handle;
+  /**
+   * Shaders linked together in this program.
+   *
+   * Used for deleting used shaders after program is compiled.
+   */
   std::vector<unsigned int> usedShaders;
+  /**
+   * Has this program been compiled yet.
+   *
+   * Used for throwing nice errors when trying to modify compiled program/use uncompiled.
+   */
   bool isFinished = false;
+  /**
+   * Retrieves uniform location from the shader for further use.
+   * @param uniformName Name of the uniform to retrieve location of.
+   * @return Location of the unifomr.
+   * @throws UnknownIdentifierException when no uniform with specified name was found.
+   */
+  GLuint getUniformLocation(const std::string& uniformName) const;
 public:
   ShaderProgram();
   /**
@@ -38,6 +64,9 @@ public:
   ///@{
   /**
    * Sets a value of uniform in shader.
+   *
+   * The shader must be active for this to have effect, failure to ensure so will however NOT result in an Exception.
+   *
    * @param uniformName Name of the uniform value
    * @param value The value to set
    * @return self for method chaining.
