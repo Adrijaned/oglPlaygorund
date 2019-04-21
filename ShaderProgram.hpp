@@ -74,6 +74,7 @@ public:
    */
   ShaderProgram& setUniform(const std::string& uniformName, const glm::vec4& value);
   ShaderProgram& setUniform(const std::string& uniformName, const glm::vec3& value);
+  ShaderProgram& setUniform(const std::string& uniformName, const glm::mat4& value);
   ///@}
 };
 

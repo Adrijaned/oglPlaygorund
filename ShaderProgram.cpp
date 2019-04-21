@@ -7,6 +7,7 @@
 #include "exceptions/InvalidStateException.hpp"
 #include "exceptions/UnknownIdentifierException.hpp"
 #include <cstdio>
+#include <glm/gtc/type_ptr.hpp>
 
 ShaderProgram& ShaderProgram::attachShader(const std::string &shaderName, GLenum shaderType) {
   if (isFinished) {
@@ -67,4 +68,9 @@ GLuint ShaderProgram::getUniformLocation(const std::string& uniformName) const {
   GLint uniformLocation = glGetUniformLocation(handle, uniformName.c_str());
   if (uniformLocation == -1) throw UnknownIdentifierException{"Uniform name not found."};
   return uniformLocation;
+}
+
+ShaderProgram &ShaderProgram::setUniform(const std::string &uniformName, const glm::mat4 &value) {
+  glUniformMatrix4fv(getUniformLocation(uniformName), 1, GL_FALSE, glm::value_ptr(value));
+  return *this;
 }

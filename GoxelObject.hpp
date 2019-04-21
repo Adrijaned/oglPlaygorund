@@ -7,11 +7,12 @@
 
 #include <string>
 #include <GL/glew.h>
+#include "RenderableBufferObject.hpp"
 
 /**
  * Loads and processes goxel-exported obj model.
  */
-class GoxelObject {
+class GoxelObject : public RenderableBufferObject {
   GLuint VAO, VBO, EBO; // vertex array object, vertex buffer object, element buffer object
   unsigned int indicesCount;
 public:
@@ -26,13 +27,8 @@ public:
    * Gets rid of the allocated buffers.
    */
   ~GoxelObject();
-  /**
-   * Draws inner vertex buffers.
-   *
-   * Expects shader program to be active that has in vertex vec3 on location 0
-   * and in color vec3 on location 1.
-   */
-  void drawBuffers() const;
+
+  void drawBuffers() const override;
 };
 
 

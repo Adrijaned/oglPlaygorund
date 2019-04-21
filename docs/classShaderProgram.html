@@ -94,6 +94,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aac65dc573759cd7521ddc6ce592a6f89"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classShaderProgram.html">ShaderProgram</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classShaderProgram.html#aac65dc573759cd7521ddc6ce592a6f89">setUniform</a> (const std::string &amp;uniformName, const glm::vec3 &amp;value)</td></tr>
 <tr class="memdesc:aac65dc573759cd7521ddc6ce592a6f89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a value of uniform in shader.  <a href="#aac65dc573759cd7521ddc6ce592a6f89">More...</a><br /></td></tr>
 <tr class="separator:aac65dc573759cd7521ddc6ce592a6f89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad175b9c37738bb6bee236cb54239757e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classShaderProgram.html">ShaderProgram</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classShaderProgram.html#ad175b9c37738bb6bee236cb54239757e">setUniform</a> (const std::string &amp;uniformName, const glm::mat4 &amp;value)</td></tr>
+<tr class="memdesc:ad175b9c37738bb6bee236cb54239757e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a value of uniform in shader.  <a href="#ad175b9c37738bb6bee236cb54239757e">More...</a><br /></td></tr>
+<tr class="separator:ad175b9c37738bb6bee236cb54239757e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Abstraction layer over OGL shader programs. </p>
@@ -202,7 +205,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="a37a9f61e346f4036c53b37712c6df7c5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a37a9f61e346f4036c53b37712c6df7c5">&#9670;&nbsp;</a></span>setUniform() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a37a9f61e346f4036c53b37712c6df7c5">&#9670;&nbsp;</a></span>setUniform() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -247,7 +250,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="aac65dc573759cd7521ddc6ce592a6f89"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aac65dc573759cd7521ddc6ce592a6f89">&#9670;&nbsp;</a></span>setUniform() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aac65dc573759cd7521ddc6ce592a6f89">&#9670;&nbsp;</a></span>setUniform() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -262,6 +265,51 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const glm::vec3 &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets a value of uniform in shader. </p>
+<p>The shader must be active for this to have effect, failure to ensure so will however NOT result in an Exception.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">uniformName</td><td>Name of the uniform value </td></tr>
+    <tr><td class="paramname">value</td><td>The value to set </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>self for method chaining. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classUnknownIdentifierException.html" title="Thrown when trying to access unknown identifier by name.">UnknownIdentifierException</a></td><td>when no uniform with specified name was found. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad175b9c37738bb6bee236cb54239757e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad175b9c37738bb6bee236cb54239757e">&#9670;&nbsp;</a></span>setUniform() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classShaderProgram.html">ShaderProgram</a> &amp; ShaderProgram::setUniform </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>uniformName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const glm::mat4 &amp;&#160;</td>
           <td class="paramname"><em>value</em>&#160;</td>
         </tr>
         <tr>

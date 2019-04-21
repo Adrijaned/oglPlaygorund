@@ -73,6 +73,15 @@ $(function() {
  <a href="classGoxelObject.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="GoxelObject_8hpp_source.html">GoxelObject.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for GoxelObject:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classGoxelObject.png" usemap="#GoxelObject_map" alt=""/>
+  <map id="GoxelObject_map" name="GoxelObject_map">
+<area href="classRenderableBufferObject.html" alt="RenderableBufferObject" shape="rect" coords="0,0,149,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -82,9 +91,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7671fd0441685a1a0aa2e6931da31a7e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGoxelObject.html#a7671fd0441685a1a0aa2e6931da31a7e">~GoxelObject</a> ()</td></tr>
 <tr class="memdesc:a7671fd0441685a1a0aa2e6931da31a7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets rid of the allocated buffers.  <a href="#a7671fd0441685a1a0aa2e6931da31a7e">More...</a><br /></td></tr>
 <tr class="separator:a7671fd0441685a1a0aa2e6931da31a7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c13a922a1e5f34ddd03936b192a15cc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGoxelObject.html#a4c13a922a1e5f34ddd03936b192a15cc">drawBuffers</a> () const</td></tr>
-<tr class="memdesc:a4c13a922a1e5f34ddd03936b192a15cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws inner vertex buffers.  <a href="#a4c13a922a1e5f34ddd03936b192a15cc">More...</a><br /></td></tr>
-<tr class="separator:a4c13a922a1e5f34ddd03936b192a15cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a088b79b7878957290946b0b9f37f04"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGoxelObject.html#a4a088b79b7878957290946b0b9f37f04">drawBuffers</a> () const override</td></tr>
+<tr class="memdesc:a4a088b79b7878957290946b0b9f37f04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws inner vertex buffers.  <a href="#a4a088b79b7878957290946b0b9f37f04">More...</a><br /></td></tr>
+<tr class="separator:a4a088b79b7878957290946b0b9f37f04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Loads and processes goxel-exported obj model. </p>
@@ -160,11 +169,14 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a4c13a922a1e5f34ddd03936b192a15cc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4c13a922a1e5f34ddd03936b192a15cc">&#9670;&nbsp;</a></span>drawBuffers()</h2>
+<a id="a4a088b79b7878957290946b0b9f37f04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a088b79b7878957290946b0b9f37f04">&#9670;&nbsp;</a></span>drawBuffers()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void GoxelObject::drawBuffers </td>
@@ -173,10 +185,17 @@ Public Member Functions</h2></td></tr>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Draws inner vertex buffers. </p>
 <p>Expects shader program to be active that has in vertex vec3 on location 0 and in color vec3 on location 1. </p>
+
+<p>Implements <a class="el" href="classRenderableBufferObject.html#af1e0295efcfe2505ea062e0bf122ee9c">RenderableBufferObject</a>.</p>
 
 </div>
 </div>

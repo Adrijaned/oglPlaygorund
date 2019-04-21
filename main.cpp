@@ -4,6 +4,8 @@
 #include "ShaderProgram.hpp"
 #include "GoxelObject.hpp"
 #include <dlfcn.h>
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
 
 int main() {
   sf::ContextSettings settings;
@@ -19,6 +21,9 @@ int main() {
 
   ShaderProgram shaderProgram{};
   shaderProgram.attachShader("vBasic", GL_VERTEX_SHADER).attachShader("fBasic", GL_FRAGMENT_SHADER).finish();
+  glm::mat4 trans = glm::mat4(1.0f);
+  trans = glm::rotate(trans, glm::radians(90.0f), glm::vec3(0.0, 0.0, 1.0));
+  trans = glm::scale(trans, glm::vec3(1.5, 1.5, 1.5));
 
   bool running = true;
   while (running) {
@@ -34,6 +39,7 @@ int main() {
     glClearColor(0.1, 0.3, 0.2, 1.0);
     glClear(GL_COLOR_BUFFER_BIT);
     shaderProgram.activate();
+    shaderProgram.setUniform("transform", trans);
     goxelObject.drawBuffers();
 
     window.display();

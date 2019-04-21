@@ -1,7 +1,7 @@
 var indexSectionsWithContent =
 {
   0: "adfgimoprsu~",
-  1: "fgipsu",
+  1: "fgiprsu",
   2: "fgimprsu",
   3: "adfgimprsu~",
   4: "o"
