@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['invalidstateexception',['InvalidStateException',['../classInvalidStateException.html',1,'']]]
+  ['goxelobject',['GoxelObject',['../classGoxelObject.html',1,'']]]
 ];

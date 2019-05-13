@@ -1,10 +1,11 @@
 var indexSectionsWithContent =
 {
-  0: "adfgimoprsu~",
-  1: "fgiprsu",
-  2: "fgimprsu",
-  3: "adfgimprsu~",
-  4: "o"
+  0: "_acdfgimoprsu~",
+  1: "cfgiprsu",
+  2: "cfgimprsu",
+  3: "acdfgimprsu~",
+  4: "_",
+  5: "o"
 };
 
 var indexSectionNames =
@@ -13,7 +14,8 @@ var indexSectionNames =
   1: "classes",
   2: "files",
   3: "functions",
-  4: "pages"
+  4: "defines",
+  5: "pages"
 };
 
 var indexSectionLabels =
@@ -22,6 +24,7 @@ var indexSectionLabels =
   1: "Classes",
   2: "Files",
   3: "Functions",
-  4: "Pages"
+  4: "Macros",
+  5: "Pages"
 };
 

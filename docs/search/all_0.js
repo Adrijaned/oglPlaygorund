@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['activate',['activate',['../classShaderProgram.html#a41f8f512d8fe7e3ea2ed17449243e7ad',1,'ShaderProgram']]],
-  ['attachshader',['attachShader',['../classShaderProgram.html#aa294818884726a1ea0a129a05ae4f64f',1,'ShaderProgram']]]
+  ['_5fuse_5fmath_5fdefines',['_USE_MATH_DEFINES',['../Camera_8cpp.html#a525335710b53cb064ca56b936120431e',1,'Camera.cpp']]]
 ];

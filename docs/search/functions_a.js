@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_7egoxelobject',['~GoxelObject',['../classGoxelObject.html#a7671fd0441685a1a0aa2e6931da31a7e',1,'GoxelObject']]]
+  ['unknownidentifierexception',['UnknownIdentifierException',['../classUnknownIdentifierException.html#ab9dc2b805df1ab90b3cacb7b6b46c5d3',1,'UnknownIdentifierException']]]
 ];

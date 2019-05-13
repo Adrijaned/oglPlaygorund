@@ -3,6 +3,7 @@
 #include <fstream>
 #include "ShaderProgram.hpp"
 #include "GoxelObject.hpp"
+#include "Camera.hpp"
 #include <dlfcn.h>
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
@@ -13,6 +14,7 @@ int main() {
   settings.minorVersion = 3;
   settings.depthBits = 32;
   sf::Window window(sf::VideoMode(800, 600), "OpenGL", sf::Style::Default, settings);
+  window.setMouseCursorVisible(false);
   glewInit();
   glEnable(GL_DEPTH_TEST);
 
@@ -27,10 +29,8 @@ int main() {
   trans = glm::rotate(trans, glm::radians(90.0f), glm::vec3(0.0, 0.0, 1.0));
   trans = glm::scale(trans, glm::vec3(1.5, 1.5, 1.5));
   glm::mat4 projectionMatrix = glm::perspective(glm::quarter_pi<float>(), 4.0f / 3.0f, 0.1f, 100.0f);
-  glm::mat4 view = glm::mat4(1.0f);
-  // note that we're translating the scene in the reverse direction of where we want to move
-  view = glm::translate(view, glm::vec3(0.0f, 0.0f, -1.3f));
-  shaderProgram.activate().setUniform("projection", projectionMatrix).setUniform("view", view);
+  shaderProgram.activate().setUniform("projection", projectionMatrix);
+  Camera camera;
 
   bool running = true;
   while (running) {
@@ -45,10 +45,15 @@ int main() {
       }
     }
 
+
+    camera.changeYaw((((int) sf::Mouse::getPosition(window).x) - (int) window.getSize().x / 2) / 100.0f); // NOLINT(bugprone-integer-division)
+    camera.changePitch(- ((int) sf::Mouse::getPosition(window).y - (int) window.getSize().y / 2) / 100.0f); // NOLINT(bugprone-integer-division)
+    sf::Mouse::setPosition(sf::Vector2i(window.getSize().x / 2, window.getSize().y / 2), window);
+
     glClearColor(0.1, 0.3, 0.2, 1.0);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // NOLINT(hicpp-signed-bitwise)
     shaderProgram.activate();
-    shaderProgram.setUniform("transform", trans);
+    shaderProgram.setUniform("transform", trans).setUniform("view", camera.getView());
     goxelObject.drawBuffers();
 
     window.display();

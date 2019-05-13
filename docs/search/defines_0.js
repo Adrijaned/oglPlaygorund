@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['architecture_5fid',['ARCHITECTURE_ID',['../3_813_82_2CompilerIdC_2CMakeCCompilerId_8c.html#aba35d0d200deaeb06aee95ca297acb28',1,'ARCHITECTURE_ID():&#160;CMakeCCompilerId.c'],['../3_813_82_2CompilerIdCXX_2CMakeCXXCompilerId_8cpp.html#aba35d0d200deaeb06aee95ca297acb28',1,'ARCHITECTURE_ID():&#160;CMakeCXXCompilerId.cpp'],['../3_813_84_2CompilerIdC_2CMakeCCompilerId_8c.html#aba35d0d200deaeb06aee95ca297acb28',1,'ARCHITECTURE_ID():&#160;CMakeCCompilerId.c'],['../3_813_84_2CompilerIdCXX_2CMakeCXXCompilerId_8cpp.html#aba35d0d200deaeb06aee95ca297acb28',1,'ARCHITECTURE_ID():&#160;CMakeCXXCompilerId.cpp']]]
+  ['_5fuse_5fmath_5fdefines',['_USE_MATH_DEFINES',['../Camera_8cpp.html#a525335710b53cb064ca56b936120431e',1,'Camera.cpp']]]
 ];

@@ -1,0 +1,4 @@
+<map id="ShaderProgram::setUniform" name="ShaderProgram::setUniform">
+<area shape="rect" id="node1" title="Sets a value of uniform in shader." alt="" coords="5,13,208,39"/>
+<area shape="rect" id="node2" href="$classShaderProgram.html#a2d6c59e604038e274455635a01c519ba" title="Retrieves uniform location from the shader for further use." alt="" coords="256,5,460,47"/>
+</map>

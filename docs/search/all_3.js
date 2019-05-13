@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['getfilename',['getFilename',['../classFileNotFoundException.html#a47a90bbb125a1d742c7750d7534f14a2',1,'FileNotFoundException']]],
-  ['goxelobject',['GoxelObject',['../classGoxelObject.html',1,'GoxelObject'],['../classGoxelObject.html#a1cc12cd89f86e3fd73ae89436e7a639c',1,'GoxelObject::GoxelObject()']]],
-  ['goxelobject_2ecpp',['GoxelObject.cpp',['../GoxelObject_8cpp.html',1,'']]],
-  ['goxelobject_2ehpp',['GoxelObject.hpp',['../GoxelObject_8hpp.html',1,'']]]
+  ['drawbuffers',['drawBuffers',['../classGoxelObject.html#a4a088b79b7878957290946b0b9f37f04',1,'GoxelObject::drawBuffers()'],['../classRenderableBufferObject.html#af1e0295efcfe2505ea062e0bf122ee9c',1,'RenderableBufferObject::drawBuffers()']]]
 ];

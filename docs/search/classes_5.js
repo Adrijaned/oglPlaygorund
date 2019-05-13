@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['shaderprogram',['ShaderProgram',['../classShaderProgram.html',1,'']]]
+  ['renderablebufferobject',['RenderableBufferObject',['../classRenderableBufferObject.html',1,'']]]
 ];

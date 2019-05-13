@@ -12,6 +12,12 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -72,9 +78,30 @@ $(function() {
 <code>#include &lt;fstream&gt;</code><br />
 <code>#include &quot;<a class="el" href="ShaderProgram_8hpp_source.html">ShaderProgram.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="GoxelObject_8hpp_source.html">GoxelObject.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Camera_8hpp_source.html">Camera.hpp</a>&quot;</code><br />
 <code>#include &lt;dlfcn.h&gt;</code><br />
 <code>#include &lt;glm/glm.hpp&gt;</code><br />
 <code>#include &lt;glm/gtc/matrix_transform.hpp&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for main.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp__incl.png" border="0" usemap="#main_8cpp" alt=""/></div>
+<map name="main_8cpp" id="main_8cpp">
+<area shape="rect"  title=" " alt="" coords="559,5,641,32"/>
+<area shape="rect"  title=" " alt="" coords="5,80,144,107"/>
+<area shape="rect"  title=" " alt="" coords="280,155,365,181"/>
+<area shape="rect"  title=" " alt="" coords="726,80,799,107"/>
+<area shape="rect"  href="ShaderProgram_8hpp.html" title=" " alt="" coords="374,80,525,107"/>
+<area shape="rect"  title=" " alt="" coords="560,155,664,181"/>
+<area shape="rect"  href="GoxelObject_8hpp.html" title=" " alt="" coords="168,80,299,107"/>
+<area shape="rect"  href="Camera_8hpp.html" title=" " alt="" coords="549,80,651,107"/>
+<area shape="rect"  title=" " alt="" coords="824,80,891,107"/>
+<area shape="rect"  title=" " alt="" coords="915,80,1133,107"/>
+<area shape="rect"  title=" " alt="" coords="389,155,448,181"/>
+<area shape="rect"  title=" " alt="" coords="473,155,535,181"/>
+<area shape="rect"  href="RenderableBufferObject_8hpp.html" title=" " alt="" coords="51,155,255,181"/>
+</map>
+</div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -96,6 +123,20 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.png" border="0" usemap="#main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" alt=""/></div>
+<map name="main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph" id="main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph">
+<area shape="rect"  title=" " alt="" coords="5,107,60,133"/>
+<area shape="rect"  href="classShaderProgram.html#aa294818884726a1ea0a129a05ae4f64f" title="Attaches a shader to the current program." alt="" coords="108,5,324,32"/>
+<area shape="rect"  href="classShaderProgram.html#aea6359b565da251e456fd0020fa0e705" title="Finishes adding new shaders, makes itself ready for use." alt="" coords="133,56,299,83"/>
+<area shape="rect"  href="classCamera.html#aca69e0993b8a13a9bb1f53374ba05dbf" title="Changes the camera yaw by given value in radians." alt="" coords="139,107,293,133"/>
+<area shape="rect"  href="classCamera.html#a4831ef8506a81b123585822f8c3e614c" title="Changes the camera pitch by given value in radians." alt="" coords="136,157,296,184"/>
+<area shape="rect"  href="classCamera.html#aa2169c5d9fb6358285b135db601f91ac" title="Returns the view matrix from this camera." alt="" coords="149,208,283,235"/>
+<area shape="rect"  href="fileUtils_8cpp.html#addf68aec208c58458cc0060be639f03f" title="Returns file in heap allocated cstring." alt="" coords="372,5,445,32"/>
+</map>
+</div>
 
 </div>
 </div>
