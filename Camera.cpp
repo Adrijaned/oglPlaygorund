@@ -21,7 +21,7 @@ const glm::mat4 Camera::getView() {
     rotationVec.z = std::sin(yaw) * xzMultiplier;
     rotationVec.y = std::sin(pitch);
 
-    viewMatrix = glm::lookAt(position, rotationVec, glm::vec3{0, 1, 0});
+    viewMatrix = glm::lookAt(position, position + rotationVec, glm::vec3{0, 1, 0});
     dirty = false;
   }
   return viewMatrix;
@@ -37,7 +37,35 @@ Camera &Camera::changeYaw(float value) {
 }
 
 Camera &Camera::changePitch(float value) {
-  pitch = std::clamp<float>(pitch + value, -M_PI_2, M_PI_2);
+  pitch = std::clamp<float>(pitch + value, -M_PI_2 + 0.0001f, M_PI_2 - 0.0001f);
   dirty = true;
+  return *this;
+}
+
+Camera &Camera::move(const Camera::MovementDirection& direction, float distance) {
+  switch (direction) {
+    case UP:
+      position.y += distance;
+      break;
+    case DOWN:
+      position.y -= distance;
+      break;
+    case FORWARD:
+      position.x += std::cos(yaw) * distance;
+      position.z += std::sin(yaw) * distance;
+      break;
+    case RIGHT:
+      position.x -= std::sin(yaw) * distance;
+      position.z += std::cos(yaw) * distance;
+      break;
+    case BACKWARD:
+      position.x -= std::cos(yaw) * distance;
+      position.z -= std::sin(yaw) * distance;
+      break;
+    case LEFT:
+      position.x += std::sin(yaw) * distance;
+      position.z -= std::cos(yaw) * distance;
+      break;
+  }
   return *this;
 }

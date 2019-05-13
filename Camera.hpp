@@ -39,6 +39,7 @@ class Camera {
    */
   glm::mat4 viewMatrix{1.0f};
 public:
+
   /**
    * Returns the view matrix from this camera
    * @return The view matrix
@@ -67,6 +68,20 @@ public:
  * @return self for method chaining.
  */
   Camera &changePitch(float value);
+  /**
+   * Possible directions Camera can move in.
+   * @see move
+   */
+  enum MovementDirection {
+    UP, DOWN, FORWARD, BACKWARD, LEFT, RIGHT
+  };
+  /**
+   * Moves this camera in given direction relative by current @b yaw.
+   * @param direction Direction to move into
+   * @param distance Distance to move by
+   * @return self for method chaining.
+   */
+  Camera& move(const MovementDirection& direction, float distance);
 };
 
 

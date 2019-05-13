@@ -42,9 +42,28 @@ int main() {
         glViewport(0, 0, event.size.width, event.size.height);
         projectionMatrix = glm::perspective(glm::quarter_pi<float>(), ((float) event.size.width) / ((float) event.size.height), 0.1f, 100.0f);
         shaderProgram.activate().setUniform("projection", projectionMatrix);
+      } else if (event.type == sf::Event::KeyPressed) {
+        if (event.key.code == sf::Keyboard::Escape) {
+          running = false;
+        }
       }
     }
 
+    {
+      using namespace sf;
+      if (Keyboard::isKeyPressed(Keyboard::W) || Keyboard::isKeyPressed(Keyboard::Up)) {
+        camera.move(Camera::FORWARD, 0.01f);
+      }
+      if (Keyboard::isKeyPressed(Keyboard::A) || Keyboard::isKeyPressed(Keyboard::Left)) {
+        camera.move(Camera::LEFT, 0.01f);
+      }
+      if (Keyboard::isKeyPressed(Keyboard::S) || Keyboard::isKeyPressed(Keyboard::Down)) {
+        camera.move(Camera::BACKWARD, 0.01f);
+      }
+      if (Keyboard::isKeyPressed(Keyboard::D) || Keyboard::isKeyPressed(Keyboard::Right)) {
+        camera.move(Camera::RIGHT, 0.01f);
+      }
+    }
 
     camera.changeYaw((((int) sf::Mouse::getPosition(window).x) - (int) window.getSize().x / 2) / 100.0f); // NOLINT(bugprone-integer-division)
     camera.changePitch(- ((int) sf::Mouse::getPosition(window).y - (int) window.getSize().y / 2) / 100.0f); // NOLINT(bugprone-integer-division)
