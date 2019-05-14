@@ -2,7 +2,7 @@
 #include <GL/glew.h>
 #include <fstream>
 #include "ShaderProgram.hpp"
-#include "GoxelObject.hpp"
+#include "GoxelObjObject.hpp"
 #include "Camera.hpp"
 #include <dlfcn.h>
 #include <glm/glm.hpp>
@@ -21,7 +21,7 @@ int main() {
   window.setVerticalSyncEnabled(true);
   window.setActive(true);
 
-  GoxelObject goxelObject {"something.obj", 0.03f};
+  GoxelObjObject goxelObject{"something.obj"};
 
   ShaderProgram shaderProgram{};
   shaderProgram.attachShader("vBasic", GL_VERTEX_SHADER).attachShader("fBasic", GL_FRAGMENT_SHADER).finish();
