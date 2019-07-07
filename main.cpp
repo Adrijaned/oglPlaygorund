@@ -7,6 +7,7 @@
 #include <dlfcn.h>
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
+#include "MyCustomChunk.hpp"
 
 int main() {
   sf::ContextSettings settings;
@@ -22,12 +23,12 @@ int main() {
   window.setActive(true);
 
   GoxelObjObject goxelObject{"something.obj"};
+  MyCustomChunk testObject {0, 0, 0};
 
   ShaderProgram shaderProgram{};
   shaderProgram.attachShader("vBasic", GL_VERTEX_SHADER).attachShader("fBasic", GL_FRAGMENT_SHADER).finish();
   glm::mat4 trans = glm::mat4(1.0f);
-  trans = glm::rotate(trans, glm::radians(90.0f), glm::vec3(0.0, 0.0, 1.0));
-  trans = glm::scale(trans, glm::vec3(1.5, 1.5, 1.5));
+
   glm::mat4 projectionMatrix = glm::perspective(glm::quarter_pi<float>(), 4.0f / 3.0f, 0.1f, 100.0f);
   shaderProgram.activate().setUniform("projection", projectionMatrix);
   Camera camera;
@@ -63,6 +64,12 @@ int main() {
       if (Keyboard::isKeyPressed(Keyboard::D) || Keyboard::isKeyPressed(Keyboard::Right)) {
         camera.move(Camera::RIGHT, 0.01f);
       }
+      if (Keyboard::isKeyPressed(Keyboard::Space)) {
+        camera.move(Camera::UP, 0.01f);
+      }
+      if (Keyboard::isKeyPressed(Keyboard::LShift)) {
+        camera.move(Camera::DOWN, 0.01f);
+      }
     }
 
     camera.changeYaw((((int) sf::Mouse::getPosition(window).x) - (int) window.getSize().x / 2) / 100.0f); // NOLINT(bugprone-integer-division)
@@ -72,8 +79,13 @@ int main() {
     glClearColor(0.1, 0.3, 0.2, 1.0);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // NOLINT(hicpp-signed-bitwise)
     shaderProgram.activate();
-    shaderProgram.setUniform("transform", trans).setUniform("view", camera.getView());
-    goxelObject.drawBuffers();
+    shaderProgram
+    .setUniform("transform", trans)
+    .setUniform("view", camera.getView())
+    .setUniform("lightPosition", glm::vec3{3, 5, 4})
+    .setUniform("lightColor", glm::vec3{1.0f, 1.0f, 1.0f});
+    testObject.drawBuffers();
+//    goxelObject.drawBuffers();
 
     window.display();
   }

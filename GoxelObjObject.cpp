@@ -9,7 +9,7 @@
 #include <cstring>
 #include <vector>
 
-GoxelObjObject::GoxelObjObject(const std::string &filename) {
+GoxelObjObject::GoxelObjObject(const std::string &filename) { // NOLINT(cppcoreguidelines-pro-type-member-init)
   glGenVertexArrays(1, &VAO);
   glGenBuffers(1, &VBO);
   glGenBuffers(1, &EBO);

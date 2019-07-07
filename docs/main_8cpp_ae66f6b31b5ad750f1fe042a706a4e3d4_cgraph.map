@@ -1,9 +1,10 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title=" " alt="" coords="5,107,60,133"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,132,60,159"/>
 <area shape="rect" id="node2" href="$classShaderProgram.html#aa294818884726a1ea0a129a05ae4f64f" title="Attaches a shader to the current program." alt="" coords="108,5,324,32"/>
 <area shape="rect" id="node4" href="$classShaderProgram.html#aea6359b565da251e456fd0020fa0e705" title="Finishes adding new shaders, makes itself ready for use." alt="" coords="133,56,299,83"/>
-<area shape="rect" id="node5" href="$classCamera.html#aca69e0993b8a13a9bb1f53374ba05dbf" title="Changes the camera yaw by given value in radians." alt="" coords="139,107,293,133"/>
-<area shape="rect" id="node6" href="$classCamera.html#a4831ef8506a81b123585822f8c3e614c" title="Changes the camera pitch by given value in radians." alt="" coords="136,157,296,184"/>
-<area shape="rect" id="node7" href="$classCamera.html#aa2169c5d9fb6358285b135db601f91ac" title="Returns the view matrix from this camera." alt="" coords="149,208,283,235"/>
+<area shape="rect" id="node5" href="$classCamera.html#ad8b94b1816df382286e05192f5045266" title="Moves this camera in given direction relative by current yaw." alt="" coords="157,107,275,133"/>
+<area shape="rect" id="node6" href="$classCamera.html#aca69e0993b8a13a9bb1f53374ba05dbf" title="Changes the camera yaw by given value in radians." alt="" coords="139,157,293,184"/>
+<area shape="rect" id="node7" href="$classCamera.html#a4831ef8506a81b123585822f8c3e614c" title="Changes the camera pitch by given value in radians." alt="" coords="136,208,296,235"/>
+<area shape="rect" id="node8" href="$classCamera.html#aa2169c5d9fb6358285b135db601f91ac" title="Returns the view matrix from this camera." alt="" coords="149,259,283,285"/>
 <area shape="rect" id="node3" href="$fileUtils_8cpp.html#addf68aec208c58458cc0060be639f03f" title="Returns file in heap allocated cstring." alt="" coords="372,5,445,32"/>
 </map>

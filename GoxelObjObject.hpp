@@ -17,7 +17,7 @@
  * @deprecated Does not allow optimizing the models in some ways and is generally annoying to work with
  */
 class GoxelObjObject : public RenderableBufferObject {
-  GLuint VAO, VBO, EBO; // vertex array object, vertex buffer object, element buffer object
+  unsigned int VAO, VBO, EBO; // vertex array object, vertex buffer object, element buffer object
   unsigned int indicesCount;
   static void parseFile(FILE* objfile, std::vector<float>& vertices, std::vector<unsigned int>& indices);
 public:

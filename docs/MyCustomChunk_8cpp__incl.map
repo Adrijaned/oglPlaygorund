@@ -1,0 +1,13 @@
+<map id="MyCustomChunk.cpp" name="MyCustomChunk.cpp">
+<area shape="rect" id="node1" title=" " alt="" coords="431,5,590,32"/>
+<area shape="rect" id="node2" href="$MyCustomChunk_8hpp.html" title=" " alt="" coords="139,80,299,107"/>
+<area shape="rect" id="node5" title=" " alt="" coords="325,155,387,181"/>
+<area shape="rect" id="node6" title=" " alt="" coords="383,80,444,107"/>
+<area shape="rect" id="node7" title=" " alt="" coords="468,80,553,107"/>
+<area shape="rect" id="node8" href="$FileNotFoundException_8hpp.html" title=" " alt="" coords="454,155,727,181"/>
+<area shape="rect" id="node10" href="$ParseException_8hpp.html" title=" " alt="" coords="628,80,852,107"/>
+<area shape="rect" id="node11" href="$InvalidDataException_8hpp.html" title=" " alt="" coords="752,155,941,181"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,155,72,181"/>
+<area shape="rect" id="node4" href="$RenderableBufferObject_8hpp.html" title=" " alt="" coords="97,155,301,181"/>
+<area shape="rect" id="node9" title=" " alt="" coords="675,229,762,256"/>
+</map>

@@ -5,16 +5,16 @@
 #ifndef OGLPLAYGROUND_PARSEEXCEPTION_HPP
 #define OGLPLAYGROUND_PARSEEXCEPTION_HPP
 
-#include <stdexcept>
+#include "InvalidDataException.hpp"
 
 /**
  * Data parsing failed.
  *
  * Thrown to indicate invalid data while parsing, e.g. in GLSL code, data files etc.
  */
-class ParseException : public std::runtime_error {
+class ParseException : public InvalidDataException {
 public:
-  explicit ParseException(const std::string& what_arg) : runtime_error(what_arg) { };
+  explicit ParseException(const std::string& what_arg) : InvalidDataException(what_arg) { };
 };
 
 

@@ -67,5 +67,6 @@ Camera &Camera::move(const Camera::MovementDirection& direction, float distance)
       position.z -= std::cos(yaw) * distance;
       break;
   }
+  dirty = true;
   return *this;
 }

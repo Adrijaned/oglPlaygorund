@@ -68,6 +68,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classCamera-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -80,6 +81,21 @@ $(function() {
 
 <p><code>#include &lt;<a class="el" href="Camera_8hpp_source.html">Camera.hpp</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a3f91b19a69b892e8094fdbae3dd63f3c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCamera.html#a3f91b19a69b892e8094fdbae3dd63f3c">MovementDirection</a> { <br />
+&#160;&#160;<a class="el" href="classCamera.html#a3f91b19a69b892e8094fdbae3dd63f3caf1360d05d72d9e65285a3b7b2d91524e">UP</a>, 
+<a class="el" href="classCamera.html#a3f91b19a69b892e8094fdbae3dd63f3ca175a5acae39dc7cec69871a517f27de9">DOWN</a>, 
+<a class="el" href="classCamera.html#a3f91b19a69b892e8094fdbae3dd63f3ca6388b5408cf8440021383388044ae77f">FORWARD</a>, 
+<a class="el" href="classCamera.html#a3f91b19a69b892e8094fdbae3dd63f3cae18db08a2289896f26dcddf6e2ad274f">BACKWARD</a>, 
+<br />
+&#160;&#160;<a class="el" href="classCamera.html#a3f91b19a69b892e8094fdbae3dd63f3ca1bed5588ea4c26163a72f0fc8621f6be">LEFT</a>, 
+<a class="el" href="classCamera.html#a3f91b19a69b892e8094fdbae3dd63f3caedac3a8506bf2bae7df2d36dd5580884">RIGHT</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:a3f91b19a69b892e8094fdbae3dd63f3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Possible directions <a class="el" href="classCamera.html" title="OGL style camera for computing view matrix for use by shaders.">Camera</a> can move in.  <a href="classCamera.html#a3f91b19a69b892e8094fdbae3dd63f3c">More...</a><br /></td></tr>
+<tr class="separator:a3f91b19a69b892e8094fdbae3dd63f3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aa2169c5d9fb6358285b135db601f91ac"><td class="memItemLeft" align="right" valign="top">const glm::mat4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCamera.html#aa2169c5d9fb6358285b135db601f91ac">getView</a> ()</td></tr>
@@ -91,10 +107,39 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4831ef8506a81b123585822f8c3e614c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classCamera.html">Camera</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCamera.html#a4831ef8506a81b123585822f8c3e614c">changePitch</a> (float value)</td></tr>
 <tr class="memdesc:a4831ef8506a81b123585822f8c3e614c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the camera pitch by given value in radians.  <a href="#a4831ef8506a81b123585822f8c3e614c">More...</a><br /></td></tr>
 <tr class="separator:a4831ef8506a81b123585822f8c3e614c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8b94b1816df382286e05192f5045266"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classCamera.html">Camera</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCamera.html#ad8b94b1816df382286e05192f5045266">move</a> (const <a class="el" href="classCamera.html#a3f91b19a69b892e8094fdbae3dd63f3c">MovementDirection</a> &amp;direction, float distance)</td></tr>
+<tr class="memdesc:ad8b94b1816df382286e05192f5045266"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves this camera in given direction relative by current <b>yaw</b>.  <a href="#ad8b94b1816df382286e05192f5045266">More...</a><br /></td></tr>
+<tr class="separator:ad8b94b1816df382286e05192f5045266"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>OGL style camera for computing view matrix for use by shaders. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="a3f91b19a69b892e8094fdbae3dd63f3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f91b19a69b892e8094fdbae3dd63f3c">&#9670;&nbsp;</a></span>MovementDirection</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classCamera.html#a3f91b19a69b892e8094fdbae3dd63f3c">Camera::MovementDirection</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Possible directions <a class="el" href="classCamera.html" title="OGL style camera for computing view matrix for use by shaders.">Camera</a> can move in. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classCamera.html#ad8b94b1816df382286e05192f5045266" title="Moves this camera in given direction relative by current yaw.">move</a> </dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a3f91b19a69b892e8094fdbae3dd63f3caf1360d05d72d9e65285a3b7b2d91524e"></a>UP&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a3f91b19a69b892e8094fdbae3dd63f3ca175a5acae39dc7cec69871a517f27de9"></a>DOWN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a3f91b19a69b892e8094fdbae3dd63f3ca6388b5408cf8440021383388044ae77f"></a>FORWARD&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a3f91b19a69b892e8094fdbae3dd63f3cae18db08a2289896f26dcddf6e2ad274f"></a>BACKWARD&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a3f91b19a69b892e8094fdbae3dd63f3ca1bed5588ea4c26163a72f0fc8621f6be"></a>LEFT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a3f91b19a69b892e8094fdbae3dd63f3caedac3a8506bf2bae7df2d36dd5580884"></a>RIGHT&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="a4831ef8506a81b123585822f8c3e614c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4831ef8506a81b123585822f8c3e614c">&#9670;&nbsp;</a></span>changePitch()</h2>
 
@@ -192,6 +237,53 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="classCamera_aa2169c5d9fb6358285b135db601f91ac_icgraph.png" border="0" usemap="#classCamera_aa2169c5d9fb6358285b135db601f91ac_icgraph" alt=""/></div>
 <map name="classCamera_aa2169c5d9fb6358285b135db601f91ac_icgraph" id="classCamera_aa2169c5d9fb6358285b135db601f91ac_icgraph">
 <area shape="rect"  title="Returns the view matrix from this camera." alt="" coords="108,5,243,32"/>
+<area shape="rect"  href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad8b94b1816df382286e05192f5045266"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8b94b1816df382286e05192f5045266">&#9670;&nbsp;</a></span>move()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classCamera.html">Camera</a> &amp; Camera::move </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classCamera.html#a3f91b19a69b892e8094fdbae3dd63f3c">MovementDirection</a> &amp;&#160;</td>
+          <td class="paramname"><em>direction</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>distance</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Moves this camera in given direction relative by current <b>yaw</b>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">direction</td><td>Direction to move into </td></tr>
+    <tr><td class="paramname">distance</td><td>Distance to move by </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>self for method chaining. </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classCamera_ad8b94b1816df382286e05192f5045266_icgraph.png" border="0" usemap="#classCamera_ad8b94b1816df382286e05192f5045266_icgraph" alt=""/></div>
+<map name="classCamera_ad8b94b1816df382286e05192f5045266_icgraph" id="classCamera_ad8b94b1816df382286e05192f5045266_icgraph">
+<area shape="rect"  title="Moves this camera in given direction relative by current yaw." alt="" coords="108,5,227,32"/>
 <area shape="rect"  href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,32"/>
 </map>
 </div>

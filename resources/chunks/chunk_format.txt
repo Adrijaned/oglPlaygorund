@@ -1,0 +1,5 @@
+bin file, containing two-byte words only, 2^16 of them - 2^17 or 131072 bytes exactly
+each chunk is 32 blocks along x and z axes, 64 along y
+1st word is id of block [x, y, z] = [0, 0, 0]
+2nd of [0, 0, 1]
+33rd of [1, 0, 0]

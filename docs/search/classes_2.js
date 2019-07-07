@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['goxelobject',['GoxelObject',['../classGoxelObject.html',1,'']]]
+  ['goxelobjobject',['GoxelObjObject',['../classGoxelObjObject.html',1,'']]]
 ];

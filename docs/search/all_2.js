@@ -1,8 +1,5 @@
 var searchData=
 [
-  ['camera',['Camera',['../classCamera.html',1,'']]],
-  ['camera_2ecpp',['Camera.cpp',['../Camera_8cpp.html',1,'']]],
-  ['camera_2ehpp',['Camera.hpp',['../Camera_8hpp.html',1,'']]],
-  ['changepitch',['changePitch',['../classCamera.html#a4831ef8506a81b123585822f8c3e614c',1,'Camera']]],
-  ['changeyaw',['changeYaw',['../classCamera.html#aca69e0993b8a13a9bb1f53374ba05dbf',1,'Camera']]]
+  ['backward',['BACKWARD',['../classCamera.html#a3f91b19a69b892e8094fdbae3dd63f3cae18db08a2289896f26dcddf6e2ad274f',1,'Camera']]],
+  ['block_5fcolors',['BLOCK_COLORS',['../classMyCustomChunk.html#aa3c553d98453830f59c9ad5fb4d559c8',1,'MyCustomChunk']]]
 ];

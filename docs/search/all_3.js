@@ -1,4 +1,8 @@
 var searchData=
 [
-  ['drawbuffers',['drawBuffers',['../classGoxelObject.html#a4a088b79b7878957290946b0b9f37f04',1,'GoxelObject::drawBuffers()'],['../classRenderableBufferObject.html#af1e0295efcfe2505ea062e0bf122ee9c',1,'RenderableBufferObject::drawBuffers()']]]
+  ['camera',['Camera',['../classCamera.html',1,'']]],
+  ['camera_2ecpp',['Camera.cpp',['../Camera_8cpp.html',1,'']]],
+  ['camera_2ehpp',['Camera.hpp',['../Camera_8hpp.html',1,'']]],
+  ['changepitch',['changePitch',['../classCamera.html#a4831ef8506a81b123585822f8c3e614c',1,'Camera']]],
+  ['changeyaw',['changeYaw',['../classCamera.html#aca69e0993b8a13a9bb1f53374ba05dbf',1,'Camera']]]
 ];
