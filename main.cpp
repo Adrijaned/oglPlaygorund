@@ -1,13 +1,11 @@
 #include <SFML/Window.hpp>
 #include <GL/glew.h>
-#include <fstream>
 #include "ShaderProgram.hpp"
 #include "GoxelObjObject.hpp"
 #include "Camera.hpp"
-#include <dlfcn.h>
-#include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include "MyCustomChunk.hpp"
+#include "HandWrittenObject.hpp"
 
 int main() {
   sf::ContextSettings settings;
@@ -18,12 +16,12 @@ int main() {
   window.setMouseCursorVisible(false);
   glewInit();
   glEnable(GL_DEPTH_TEST);
-
+glEnable(GL_CULL_FACE);
+glCullFace(GL_BACK);
   window.setVerticalSyncEnabled(true);
   window.setActive(true);
-
   GoxelObjObject goxelObject{"something.obj"};
-  MyCustomChunk testObject {0, 0, 0};
+  HandWrittenObject testObject {"handEdit.txt"};
 
   ShaderProgram shaderProgram{};
   shaderProgram.attachShader("vBasic", GL_VERTEX_SHADER).attachShader("fBasic", GL_FRAGMENT_SHADER).finish();
@@ -84,8 +82,8 @@ int main() {
     .setUniform("view", camera.getView())
     .setUniform("lightPosition", glm::vec3{3, 5, 4})
     .setUniform("lightColor", glm::vec3{1.0f, 1.0f, 1.0f});
-    testObject.drawBuffers();
-//    goxelObject.drawBuffers();
+//    testObject.drawBuffers();
+    goxelObject.drawBuffers();
 
     window.display();
   }

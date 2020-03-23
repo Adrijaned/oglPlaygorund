@@ -70,3 +70,7 @@ Camera &Camera::move(const Camera::MovementDirection& direction, float distance)
   dirty = true;
   return *this;
 }
+
+const glm::vec3 &Camera::getPosition() const {
+  return position;
+}

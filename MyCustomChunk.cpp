@@ -29,7 +29,7 @@ MyCustomChunk::MyCustomChunk(short x, short y, short z) {
   }
   fseek(file, 0, SEEK_END);
   if (ftell(file) != 32 * 32 * 64 * 2) {
-    int size = ftell(file);
+    long size = ftell(file);
     fclose(file);
     throw ParseException{"Chunk file must be exactly 131072 bytes, is " + std::to_string(size)};
   }
@@ -44,7 +44,7 @@ MyCustomChunk::MyCustomChunk(short x, short y, short z) {
   for (int _x = 0; _x < 32; _x++) {
     for (int _y = 0; _y < 64; _y++) {
       for (int _z = 0; _z < 32; _z++) {
-        short blockId = getBlockId(_x, _y, _z);
+        unsigned short blockId = getBlockId(_x, _y, _z);
         if (blockId != 0) {
           if ((unsigned long) blockId >= sizeof(BLOCK_COLORS) / sizeof(uint32_t)) {
             throw InvalidDataException{"Unknown block id, got " + std::to_string(blockId)};

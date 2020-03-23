@@ -75,6 +75,9 @@ public:
   enum MovementDirection {
     UP, DOWN, FORWARD, BACKWARD, LEFT, RIGHT
   };
+
+  const glm::vec3 &getPosition() const;
+
   /**
    * Moves this camera in given direction relative by current @b yaw.
    * @param direction Direction to move into
