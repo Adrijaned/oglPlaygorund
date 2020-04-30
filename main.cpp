@@ -16,13 +16,13 @@ int main() {
   window.setMouseCursorVisible(false);
   glewInit();
   glEnable(GL_DEPTH_TEST);
-glEnable(GL_CULL_FACE);
-glCullFace(GL_BACK);
+//glEnable(GL_CULL_FACE);
+//glCullFace(GL_BACK);
   window.setVerticalSyncEnabled(true);
   window.setActive(true);
   GoxelObjObject goxelObject{"something.obj"};
   HandWrittenObject testObject {"handEdit.txt"};
-
+  MyCustomChunk chunk {0, 0, 0};
   ShaderProgram shaderProgram{};
   shaderProgram.attachShader("vBasic", GL_VERTEX_SHADER).attachShader("fBasic", GL_FRAGMENT_SHADER).finish();
   glm::mat4 trans = glm::mat4(1.0f);
@@ -80,11 +80,11 @@ glCullFace(GL_BACK);
     shaderProgram
     .setUniform("transform", trans)
     .setUniform("view", camera.getView())
-    .setUniform("lightPosition", glm::vec3{3, 5, 4})
+    .setUniform("lightPosition", glm::vec3{3, 9, 6})
     .setUniform("lightColor", glm::vec3{1.0f, 1.0f, 1.0f});
 //    testObject.drawBuffers();
-    goxelObject.drawBuffers();
-
+//    goxelObject.drawBuffers();
+    chunk.drawBuffers();
     window.display();
   }
 

@@ -10,8 +10,8 @@ uniform vec3 lightColor;
 const float AMBIENT_MULTIPLIER = 0.11;
 
 void main() {
-    vec3 lightDirection = normalize(lightPosition - fPos);
-    float diffusionScale = min(max(dot(fNormal, lightDirection), 0.0f), 1.0f);
+    vec3 lightDirection = normalize(lightPosition);
+    float diffusionScale = min((dot(fNormal, lightDirection) + 1.0f) / 2.0f, 1.0f);
     vec3 lightColorMultiplier = lightColor * (diffusionScale + AMBIENT_MULTIPLIER);
     FragColor = vec4(fColor * lightColorMultiplier, 1.0f);
 }
